@@ -1,7 +1,6 @@
 #ifndef __CHECK_H
 #define __CHECK_H
 
-#include "initialize.h"
 #include <algorithm>        // 包含 std::count
 #include <iostream>
 
@@ -17,14 +16,25 @@ enum ErrorType {
     TOO_MANY_OPERATORS,        // 太多操作符
     DIVISION_BY_ZERO,          // 除数为0
     FACTORIAL_ERROR,           // 阶乘错误
+    FACTORIAL_INF,             // 阶乘过大
     POWER_ERROR,               // 指数运算错误
     RESULT_NAN,                // 结果非数字
     RESULT_INF,                // 结果无穷大
+    LOST_LEFT_PARE,            // 缺失左括号
     UNKNOWN_ERROR              // 未知错误
 };
 
-extern ErrorType errorFlag;
-extern string    invalidNumber;
+enum WarningType {
+    NO_WARNING,           // 无警告
+    LOST_PRECISION        // 精度丢失
+};
+
+extern ErrorType   errorFlag;
+extern WarningType warningFlag;
+
+extern string invalidNumber;
+extern bool   irrational;
+extern bool   last_irrational;
 
 inline void setError(ErrorType type) { errorFlag = type; }
 

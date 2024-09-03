@@ -1,7 +1,12 @@
 #include "check.h"
+#include "initialize.h"
 
-ErrorType errorFlag = NO_ERROR;        // 错误标志
-string    invalidNumber;               // 非法数字
+// 全局变量
+ErrorType   errorFlag   = NO_ERROR;          // 错误标志
+WarningType warningFlag = NO_WARNING;        // 警告标志
+string      invalidNumber;                   // 非法数字
+bool        irrational;                      // 无理数
+bool        last_irrational;                 // 上次结果
 
 /**
  * @brief 检查数字的正确性

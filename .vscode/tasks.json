@@ -4,21 +4,30 @@
 		{
 			"type": "cppbuild",
 			"label": "C/C++: g++.exe 生成活动文件",
-			"command": "D:\\Program Files\\RedPanda-CPP\\MinGW64\\bin\\g++.exe",
+			"command": "C:\\msys64\\mingw64\\bin\\g++.exe",
 			"args": [
 				"-fdiagnostics-color=always",
-				//源文件
+				// 源文件
 				"-g",
 				"${workspaceFolder}\\Src\\main.cpp",
 				"${workspaceFolder}\\Src\\initialize.cpp",
 				"${workspaceFolder}\\Src\\check.cpp",
 				"${workspaceFolder}\\Src\\calculate.cpp",
-				// 头文件目录
+				"${workspaceFolder}\\Src\\HPReal.cpp",
+				// 头文件
 				"-I",
 				"${workspaceFolder}\\Inc",
-				// 编译输出文件
+				"-I",
+				"C:\\msys64\\mingw64\\include",
+				// 链接库
+				"-L",
+				"C:\\msys64\\mingw64\\lib",
 				"-o",
-				"${workspaceFolder}\\build\\Calculator.exe"
+				"${workspaceFolder}\\build\\Calculator.exe",
+				// 使用GMP库
+				"-lgmp",
+				// 静态链接
+				"-static"
 			],
 			"options": {
 				"cwd": "${fileDirname}"
@@ -27,7 +36,7 @@
 				"$gcc"
 			],
 			"group": "build",
-			"detail": "编译器: D:\\Program Files\\RedPanda-CPP\\MinGW64\\bin\\g++.exe"
+			"detail": "编译器: C:\\msys64\\mingw64\\bin\\g++.exe"
 		}
 	]
 }
