@@ -4,7 +4,7 @@
 		{
 			"type": "cppbuild",
 			"label": "C/C++: g++.exe 生成活动文件",
-			"command": "C:\\msys64\\mingw64\\bin\\g++.exe",
+			"command": "D:\\msys64\\mingw64\\bin\\g++.exe",
 			"args": [
 				"-fdiagnostics-color=always",
 				// 源文件
@@ -18,10 +18,10 @@
 				"-I",
 				"${workspaceFolder}\\Inc",
 				"-I",
-				"C:\\msys64\\mingw64\\include",
+				"D:\\msys64\\mingw64\\include",
 				// 链接库
 				"-L",
-				"C:\\msys64\\mingw64\\lib",
+				"D:\\msys64\\mingw64\\lib",
 				"-o",
 				"${workspaceFolder}\\build\\Calculator.exe",
 				// 使用GMP库
@@ -36,7 +36,7 @@
 				"$gcc"
 			],
 			"group": "build",
-			"detail": "编译器: C:\\msys64\\mingw64\\bin\\g++.exe"
+			"detail": "编译器: D:\\msys64\\mingw64\\bin\\g++.exe"
 		}
 	]
 }
