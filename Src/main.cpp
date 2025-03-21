@@ -7,7 +7,12 @@ int main() {
     while (1) {
         Init();                 // 初始化
         getline(cin, s);        // 输入计算式
-        handleInput(s);         // 处理输入
+        if(s=="exit")
+            break;
+        else if(s=="clear")
+            system("cls");
+        else
+            handleInput(s);         // 处理输入
     }
     return 0;
 }
